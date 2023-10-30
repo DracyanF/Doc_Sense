@@ -23,6 +23,7 @@ st.title("YouTube Video Summarizer")
 transcription_model_id = "openai/whisper-large"
 llm_model_id = "tiiuae/falcon-7b-instruct"
 HF_TOKEN = os.environ.get("HF_TOKEN", None)
+save_dir = "docs"
 
 # Function to get YouTube video title
 def get_youtube_title(url):
@@ -264,7 +265,8 @@ def summarize_text(title, text, temperature, words, use_api, api_token, do_sampl
 
     from langchain.document_loaders import TextLoader
     from langchain.text_splitter import TokenTextSplitter
-    
+
+    transcript_file_path = os.path.join(save_dir, 'transcript.txt')
     with open(save_dir+'/transcript.txt','w') as f:
         f.write(text)
     loader = TextLoader(save_dir+"/transcript.txt")
