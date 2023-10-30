@@ -310,7 +310,7 @@ if st.button("Summarize!"):
 
         st.write("Video Title:", title)
         st.write("Transcript Source:", transcript_source)
-        st.write("Summary Source:", summary_source)
+        # st.write("Summary Source:", summary_source)
         st.write("Summary:", summary)
 
         # You can add other display elements as needed
