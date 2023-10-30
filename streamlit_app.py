@@ -227,7 +227,7 @@ def summarize_text(title, text, temperature, words, use_api, api_token, do_sampl
     PARTIAL SUMMARIES:\n
     `{doc_summaries}`\n 
     ----------------------- \n
-    Generate an executive summary of the whole text in maximum {words} words that contains the main messages, points, and arguments presented in the video as bullet points.\n
+    Generate an executive summary of the whole text in maximum {words} words that contains the main messages, points, Do not repeat the same sentences again and  arguments presented in the video as bullet points each of them on a new line.\n
     EXECUTIVE SUMMARY:\n
     """
     combine_prompt = PromptTemplate(
