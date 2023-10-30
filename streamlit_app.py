@@ -266,6 +266,9 @@ def summarize_text(title, text, temperature, words, use_api, api_token, do_sampl
     from langchain.document_loaders import TextLoader
     from langchain.text_splitter import TokenTextSplitter
 
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
     transcript_file_path = os.path.join(save_dir, 'transcript.txt')
     with open(save_dir+'/transcript.txt','w') as f:
         f.write(text)
