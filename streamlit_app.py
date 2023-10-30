@@ -88,7 +88,7 @@ def transcribe_yt_vid_api(url, api_token):
 # Function to summarize text
 def summarize_text(title, text, temperature, words, use_api, api_token, do_sample):
     # ... (your existing code for summarization)
-  from langchain.chains.llm import LLMChain
+    from langchain.chains.llm import LLMChain
     from langchain.prompts import PromptTemplate
     from langchain.chains import ReduceDocumentsChain, MapReduceDocumentsChain
     from langchain.chains.combine_documents.stuff import StuffDocumentsChain
