@@ -18,7 +18,7 @@ import gradio as gr
 
 # Initialize Streamlit
 st.set_page_config(layout="wide")
-st.title("YouTube Video Summarizer")
+st.title("DocSense: YouTube Video Summarizer")
 
 transcription_model_id = "openai/whisper-large"
 llm_model_id = "tiiuae/falcon-7b-instruct"
