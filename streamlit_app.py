@@ -13,6 +13,7 @@ from langchain.chains.llm import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.chains import ReduceDocumentsChain, MapReduceDocumentsChain
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
+from langchain import HuggingFaceHub
 import gradio as gr
 
 # Initialize Streamlit
@@ -121,7 +122,7 @@ def summarize_text(title, text, temperature, words, use_api, api_token, do_sampl
 
     if use_api:
         
-        from langchain import HuggingFaceHub
+        
 
         # os.environ["HUGGINGFACEHUB_API_TOKEN"] = api_token
         llm=HuggingFaceHub(
