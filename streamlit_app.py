@@ -21,7 +21,7 @@ st.set_page_config(layout="wide")
 st.title("YouTube Video Summarizer")
 
 transcription_model_id = "openai/whisper-large"
-llm_model_id = "tiiuae/falcon-7b-instruct"
+llm_model_id = "tiiuae/falcon-40b-instruct"
 HF_TOKEN = os.environ.get("HF_TOKEN", None)
 save_dir = "docs"
 
