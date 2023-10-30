@@ -296,7 +296,7 @@ from pytube import YouTube
 url = st.text_input("Enter YouTube video URL:", "")
 api_token = st.text_input("Paste your Hugging Face API token here (Optional):", "")
 force_transcribe = st.checkbox("Transcribe even if transcription is available.")
-# temperature = st.slider("Generation temperature", min_value=0.01, max_value=1.0, value=0.25)
+temperature = st.slider("Generation temperature", min_value=0.01, max_value=1.0, value=0.25)
 words = st.slider("Length of the summary", min_value=100, max_value=500, value=100)
 do_sample = st.checkbox("Set the Temperature")
 
